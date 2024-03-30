@@ -1,8 +1,12 @@
 import type { Action, ThunkAction } from "@reduxjs/toolkit"
 import { configureStore } from "@reduxjs/toolkit"
 
+import playgroundReducer from "./reducers/playgroundSlice/slices"
+
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    playground: playgroundReducer,
+  },
 })
 
 export type AppStore = typeof store
